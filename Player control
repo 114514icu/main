@@ -79,7 +79,7 @@ scriptName.BackgroundTransparency = 1.000
 scriptName.BorderSizePixel = 0
 scriptName.Size = UDim2.new(1, 0, 0, 20)
 scriptName.Font = Enum.Font.SourceSans
-scriptName.Text = "info script made by MyWorld"
+scriptName.Text = "脚本由砂狼シロコ翻译"
 scriptName.TextColor3 = Color3.fromRGB(181, 181, 181)
 scriptName.TextSize = 20.000
 scriptName.TextWrapped = true
@@ -1032,7 +1032,7 @@ reset = function(respawn)
 		end
 	end)
 	if respawn and (not loopr) then
-		notify("respawning...")
+		notify("重生中...")
 	end
 	if respawn and (plrs.RespawnTime > 0.5) then
 		spawn(function()
@@ -1073,10 +1073,10 @@ makecharbutton("respawn").MouseButton1Click:Connect(function()
 		reset(true)
 	end
 end)
-makecharbutton("reset").MouseButton1Click:Connect(function()
+makecharbutton("resetc").MouseButton1Click:Connect(function()
 	reset(false)
 end)
-local looprb = makecharbutton("loop respawn")
+local looprb = makecharbutton("loop respawnxcs")
 spawn(function()
 	while wait() and gui do
 		if loopr then
@@ -1086,9 +1086,9 @@ spawn(function()
 end)
 looprb.MouseButton1Click:Connect(function()
 	loopr = not loopr
-	looprb.Text = "loop respawn" .. ((loopr and " (Enabled)") or "")
+	looprb.Text = "循环重生" .. ((loopr and " (Enabled)") or "")
 end)
-makecharbutton("remove meshes").MouseButton1Click:Connect(function()
+makecharbutton("删除网格").MouseButton1Click:Connect(function()
 	local c = lp.Character
 	if c and c.Parent then
 		for i, v in pairs(c:GetDescendants()) do
@@ -1101,7 +1101,7 @@ makecharbutton("remove meshes").MouseButton1Click:Connect(function()
 		notify("no character")
 	end
 end)
-makecharbutton("break joints").MouseButton1Click:Connect(function()
+makecharbutton("断开连接").MouseButton1Click:Connect(function()
 	local c = lp.Character
 	if c and c.Parent then
 		c:BreakJoints()
@@ -1110,23 +1110,23 @@ makecharbutton("break joints").MouseButton1Click:Connect(function()
 		notify("no character")
 	end
 end)
-local noclipb = makecharbutton("noclip")
-local antiflingb = makecharbutton("anti fling")
+local noclipb = makecharbutton("卡出")
+local antiflingb = makecharbutton("甩飞")
 local noclip = false
 local antifling = false
 noclipb.MouseButton1Click:Connect(function()
 	noclip = not noclip
-	noclipb.Text = "noclip" .. ((noclip and " (Enabled)") or "")
+	noclipb.Text = "卡出" .. ((卡出 " (开)") or "")
 end)
 antiflingb.MouseButton1Click:Connect(function()
 	antifling = not antifling
-	antiflingb.Text = "anti fling" .. ((antifling and " (Enabled)") or "")
+	antiflingb.Text = "甩飞" .. ((甩飞 " (开)") or "")
 end)
 local fakevoidb = makecharbutton("fake void")
 fakevoidb.MouseButton1Click:Connect(function()
     if fakevoidp then
         fakevoidp = nil
-        fakevoidb.Text = "fake void"
+        fakevoidb.Text = "假虚空"
     else
         local c = lp.Character
         if not (c and c.Parent) then
@@ -1139,7 +1139,7 @@ fakevoidb.MouseButton1Click:Connect(function()
             return
         end
         fakevoidp = part
-        fakevoidb.Text = "fake void (Enabled)"
+        fakevoidb.Text = "假虚空 (开)"
         notify("character teleported under FallenPartsDestroyHeight")
         
         local dh = ws.FallenPartsDestroyHeight
@@ -1210,7 +1210,7 @@ con = game:GetService("UserInputService").JumpRequest:Connect(function()
 end)
 infjumpb.MouseButton1Click:Connect(function()
 	infjump = not infjump
-	infjumpb.Text = "infjump" .. ((infjump and " (Enabled)") or "")
+	infjumpb.Text = "infjump(翻译不出来)" .. ((infjump(翻译不出来) and " (开)") or "")
 end)
 makecharbutton("god (remove humanoid)").MouseButton1Click:Connect(function()
 	local c = lp.Character
@@ -1271,15 +1271,15 @@ spawn(function()
 end)
 loopgb.MouseButton1Click:Connect(function()
 	loopg = not loopg
-	loopgb.Text = "loop god mode" .. ((loopg and " (Enabled)") or "")
+	loopgb.Text = "循环神模式" .. ((循环神模式 " (开)") or "")
 end)
-local flyb = makecharbutton("fly")
+local flyb = makecharbutton("飞行")
 flyb.MouseButton1Click:Connect(function()
 	if cfly and cfly.Parent then
 		cfly = nil
 	else
 		cfly = lp.Character
-		flyb.Text = "fly (Enabled)"
+		flyb.Text = "飞行 (开)"
 	end
 end)
 
@@ -1369,7 +1369,7 @@ end)
 local hiddenflingB = makecharbutton("hidden fling")
 hiddenflingB.MouseButton1Click:Connect(function()
     hiddenfling = not hiddenfling
-    hiddenflingB.Text = "hidden fling" .. ((hiddenfling and " (Enabled)") or "")
+    hiddenflingB.Text = "隐形甩飞" .. ((隐形甩飞 " (开)") or "")
 end)
 
 makecharbutton("anti respawn (wait 5 s)").MouseButton1Click:Connect(respawnRequest)
@@ -1441,7 +1441,7 @@ local ctrltp = false
 local clicktpbutton = makecharbutton("ctrl click tp")
 clicktpbutton.MouseButton1Click:Connect(function()
     ctrltp = not ctrltp
-    clicktpbutton.Text = "ctrl click tp" .. ((ctrltp and " (Enabled)") or "")
+    clicktpbutton.Text = "按住ctrl时点击传送" .. ((按住ctrl时点击传送 " (开)") or "")
 end)
 local con = nil
 con = mouse.Button1Down:Connect(function()
@@ -1472,7 +1472,7 @@ con = mouse.Button1Down:Connect(function()
 end)
 makecharbutton("view").MouseButton1Click:Connect(unview)
 
-local utilframe = makeFrame(scrollingFrame, "Utilities", Color3.fromRGB(0, 150, 150))
+local utilframe = makeFrame(scrollingFrame, "功能", Color3.fromRGB(0, 150, 150))
 local utilscroll = utilframe.ScrollingFrame
 
 local function makeutilbutton(buttontext)
@@ -1489,7 +1489,7 @@ local function makeutilbutton(buttontext)
 	return button
 end
 
-local netb = makeutilbutton("net bypass")
+local netb = makeutilbutton("网络绕过")
 local net = false
 netb.MouseButton1Click:Connect(function()
 	if net then
@@ -1507,20 +1507,20 @@ netb.MouseButton1Click:Connect(function()
 			notify("exploit not supported")
 		end
 	end
-	netb.Text = "net bypass" .. ((net and " (Enabled)") or "")
+	netb.Text = "网络绕过" .. ((net and " (开)") or "")
 end)
 
-local espb = makeutilbutton("esp")
+local espb = makeutilbutton("透视")
 local esp = false
 espb.MouseButton1Click:Connect(function()
 	esp = not esp
-	espb.Text = "esp" .. ((esp and " (Enabled)") or "")
+	espb.Text = "透视" .. ((透视 " (开)") or "")
 end)
-local teamcheckb = makeutilbutton("esp team check")
+local teamcheckb = makeutilbutton("透视团队检查")
 local espTeamCheck = false
 teamcheckb.MouseButton1Click:Connect(function()
 	espTeamCheck = not espTeamCheck
-	teamcheckb.Text = "esp team check" .. ((espTeamCheck and " (Enabled)") or "")
+	teamcheckb.Text = "透视团队检查" .. ((透视团队检查 " (开)") or "")
 end)
 
 local espcolor = Color3.fromRGB(255, 0, 0)
@@ -1575,7 +1575,7 @@ con = renderstepped:Connect(function()
 	end
 end)
 
-makeutilbutton("rejoin").MouseButton1Click:Connect(function()
+makeutilbutton("重新加入服务器").MouseButton1Click:Connect(function()
 	if #plrs:GetPlayers() == 1 then
 		lp:Kick()
 		wait()
@@ -1585,7 +1585,7 @@ makeutilbutton("rejoin").MouseButton1Click:Connect(function()
 	end
 end)
 
-makeutilbutton("serverhop").MouseButton1Click:Connect(function()
+makeutilbutton("加入其它服务器").MouseButton1Click:Connect(function()
 	local servers = nil
 	pcall(function()
 		servers = game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data
@@ -1607,7 +1607,7 @@ makeutilbutton("serverhop").MouseButton1Click:Connect(function()
 	end
 end)
 
-makeutilbutton("instant leave").MouseButton1Click:Connect(function()
+makeutilbutton("立即离开").MouseButton1Click:Connect(function()
 	lp:Kick()
 	wait()
 	game:Shutdown()
