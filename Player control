@@ -1470,7 +1470,7 @@ con = mouse.Button1Down:Connect(function()
         weldtp(hrp, to)
     end
 end)
-makecharbutton("让摄像机进入第三人称").MouseButton1Click:Connect(unview)
+makecharbutton("第三人称").MouseButton1Click:Connect(unview)
 
 local utilframe = makeFrame(scrollingFrame, "绘制", Color3.fromRGB(0, 150, 150))
 local utilscroll = utilframe.ScrollingFrame
