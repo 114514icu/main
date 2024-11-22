@@ -1575,7 +1575,7 @@ con = renderstepped:Connect(function()
 	end
 end)
 
-makeutilbutton("加入").MouseButton1Click:Connect(function()
+makeutilbutton("加入其它服务器").MouseButton1Click:Connect(function()
 	if #plrs:GetPlayers() == 1 then
 		lp:Kick()
 		wait()
@@ -1607,7 +1607,7 @@ makeutilbutton("服务器跃点").MouseButton1Click:Connect(function()
 	end
 end)
 
-makeutilbutton("退出").MouseButton1Click:Connect(function()
+makeutilbutton("退出服务器").MouseButton1Click:Connect(function()
 	lp:Kick()
 	wait()
 	game:Shutdown()
