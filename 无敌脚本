@@ -1,0 +1,97 @@
+local RainbowLib =
+loadstring(game:HelpGet("https://raw.githubusercontent.com/YJY2022hh666/yjy/main/rainbow.ui.main.lua?token=GHSAT0AAAAAACESL5MYP6BL6PJ45CVEZRQEZFYXXUA",true))()
+local window = library:new("无敌脚本")
+
+local creds = window:Tab("介绍",'随便做的脚本')
+
+local bin = creds:section("信息",true)
+
+    bin:Label("用户："..game.Players.LocalPlayer.Character.Humanoid.Name)
+    bin:Label("你的注入器:"..identifyexecutor())
+
+local credits = creds:section("UI设置",true)
+
+    credits:Button("摧毁UI",function()
+        game:GetService("CoreGui")["frosty"]:Destroy()
+    end)
+
+    credits:Toggle("彩虹UI", "", false, function(state)
+        if state then
+        game:GetService("CoreGui")["frosty"].Main.Style = "DropShadow"
+        else
+            game:GetService("CoreGui")["frosty"].Main.Style = "Custom"
+        end
+    end)
+
+credits:Toggle("玩家加入游戏提示", "", false, function(state)
+        if state then
+    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()
+    end)
+window:Tab("这里是分类格式，就是菜单左侧的",'6035145364')
+
+local bin = creds:section("这里和上面一样",true)
+
+local credits = creds:section("这里还是和上面一样",true)
+
+    credits:Button("玩家控制",function()
+  
+	local RainbowLib =
+loadstring(game:HelpGet("https://raw.githubusercontent.com/YJY2022hh666/yjy/main/rainbow.ui.main.lua?token=GHSAT0AAAAAACESL5MYP6BL6PJ45CVEZRQEZFYXXUA",true))()
+local window = library:new("无敌脚本")
+
+local creds = window:Tab("介绍",'随便做的脚本')
+
+local bin = creds:section("信息",true)
+
+    bin:Label("用户："..game.Players.LocalPlayer.Character.Humanoid.Name)
+    bin:Label("你的注入器:"..identifyexecutor())
+
+local credits = creds:section("UI设置",true)
+
+    credits:Button("摧毁UI",function()
+        game:GetService("CoreGui")["frosty"]:Destroy()
+    end)
+
+    credits:Toggle("彩虹UI", "", false, function(state)
+        if state then
+        game:GetService("CoreGui")["frosty"].Main.Style = "DropShadow"
+        else
+            game:GetService("CoreGui")["frosty"].Main.Style = "Custom"
+        end
+    end)
+
+credits:Toggle("玩家加入游戏提示", "", false, function(state)
+        if state then
+    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()
+    end)
+window:Tab("这里是分类格式，就是菜单左侧的",'6035145364')
+
+local bin = creds:section("这里和上面一样",true)
+
+local credits = creds:section("这里还是和上面一样",true)
+
+    credits:Button("测试注入器等级",function()
+    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/114514icu/main/refs/heads/shalang/Grade%20test"))()
+ end)
+redits:Button("查找玩家",function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/114514icu/main/refs/heads/main/Player%20control"))()
+ end)
+credits:Button("UNC测试",function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/114514icu/main/refs/heads/main/UNC%20test"))()
+credits:Toggle("功能名", "", false, function(state)--这个是一种功能，可以随意开关
+        if state then
+    空一行
+    脚本
+    end)
+    end)
+
+credits:Toggle("功能名", "", false, function(state)--这个是一种功能，可以随意开关
+        if state then
+    空一行
+    脚本
+    end)
